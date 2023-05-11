@@ -1,0 +1,53 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  pointer-events: none;
+}
+.center-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 7em;
+    color: white;
+    margin: 0;
+  }
+
+  p {
+    font-size: 1em;
+    color: white;
+    margin-top: 0.5em;
+  }
+
+  h2 {
+    font-size: 3em;
+    color: white;
+    margin-bottom: 0.3em;
+  }
+
+  .image-wrapper {
+    display: flex;
+    flex-direction: row;
+
+    img {
+      margin-top: 0.5em;
+      width: 120px;
+      margin-left: 20px;
+    }
+  }
+}
+
+.lottie-component {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
