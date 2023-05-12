@@ -1,9 +1,15 @@
 import logo from "../../assets/logo.png";
-import "../scss/Navbar.scss"
+import "../scss/Navbar.scss";
+import { useSpring, animated as a } from "@react-spring/web";
 
 const Navbar = () => {
+  const [props, api] = useSpring(() => ({
+    from: { y: -100},
+    to: { y: 0 },
+    config: { mass: 1, friction: 14, tension: 250 },
+  }));
   return (
-    <div className="navbar">
+    <a.div className="navbar" style={props}>
       <div className="left">
         <img src={logo} alt="Logo" className="logo" />
       </div>
@@ -12,7 +18,7 @@ const Navbar = () => {
         <a href="#project">Project</a>
         <a href="#about">About</a>
       </div>
-    </div>
+    </a.div>
   );
 };
 
